@@ -1,0 +1,87 @@
+# Version control
+.git
+.gitignore
+
+# Temporary files
+__pycache__/
+**/__pycache__/
+*.pyc
+**/*.pyc
+*.pyo
+**/*.pyo
+
+# Ignore macOS DS_Store files everywhere
+.DS_Store
+**/.DS_Store
+
+# (Optional) Ignore other common unwanted files
+*.pyd
+**/*.pyd
+
+# Distribution / packaging
+.Python
+*.egg-info
+*.egg
+dist
+build
+develop-eggs
+downloads
+eggs
+.eggs
+lib
+lib64
+parts
+sdist
+var
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox
+.nox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# dotenv
+.env
+.env.*
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+
+# Docker
+docker-compose.yml
+Dockerfile
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# User-specific directories
+*/.pytest_cache
+**/.benchmarks/
+**/.cache/
+**/.pytest_cache/
+**/data
+**/artifacts/
+**/storage/
