@@ -1,0 +1,78 @@
+# ---- Next.js / Node ----
+# Ignore node_modules folder
+node_modules/
+
+# Ignore logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Ignore build output
+.next
+out
+
+# Ignore dotenv environment variables file
+.env
+.env.enc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore mount configuration (environment-specific paths)
+mounts.json
+docker-compose.override.yml
+
+# SSL certificate files
+/certs
+*.pem
+
+# ---- Python / FastAPI ----
+# Ignore Python build artifacts
+__pycache__
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+*.spec
+
+# Ignore virtualenv
+venv/
+.venv/
+
+# Ignore data and artifacts
+/backend/data/
+**/artifacts/
+**/storage*
+
+# Ignore PyCharm IDE artifacts
+.idea/
+
+# Ignore all databases
+*.db
+*.sqlite
+
+# Ignore local files
+langgraph.txt
+notes.md
+
+# Ignore IPython notebooks
+.ipynb_checkpoints
+**/*.ipynb_checkpoints/ 
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore coding assistant files
+.cursor/
+.claude/
+.vscode/

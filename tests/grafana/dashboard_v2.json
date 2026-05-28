@@ -1,0 +1,471 @@
+{
+    "__inputs": [
+        {
+            "name": "DS_LOKI",
+            "label": "loki",
+            "description": "",
+            "type": "datasource",
+            "pluginId": "loki",
+            "pluginName": "Loki"
+        }
+    ],
+    "__elements": {},
+    "__requires": [
+        {
+            "type": "grafana",
+            "id": "grafana",
+            "name": "Grafana",
+            "version": "12.0.0"
+        },
+        {
+            "type": "panel",
+            "id": "logs",
+            "name": "Logs",
+            "version": ""
+        },
+        {
+            "type": "datasource",
+            "id": "loki",
+            "name": "Loki",
+            "version": "1.0.0"
+        }
+    ],
+    "annotations": {
+        "list": [
+            {
+                "builtIn": 1,
+                "datasource": {
+                    "type": "grafana",
+                    "uid": "-- Grafana --"
+                },
+                "enable": true,
+                "hide": true,
+                "iconColor": "rgba(0, 211, 255, 1)",
+                "name": "Annotations & Alerts",
+                "type": "dashboard"
+            }
+        ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": null,
+    "links": [],
+    "panels": [
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+            },
+            "gridPos": {
+                "h": 7,
+                "w": 12,
+                "x": 0,
+                "y": 0
+            },
+            "id": 7,
+            "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "prettifyLogMessage": false,
+                "showCommonLabels": false,
+                "showLabels": false,
+                "showTime": false,
+                "sortOrder": "Descending",
+                "wrapLogMessage": false
+            },
+            "pluginVersion": "12.0.0",
+            "targets": [
+                {
+                    "direction": "backward",
+                    "editorMode": "builder",
+                    "expr": "{container=\"knowledge-worker\"} |= ``",
+                    "queryType": "range",
+                    "refId": "A",
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "${DS_LOKI}"
+                    }
+                }
+            ],
+            "title": "knowledge-worker",
+            "type": "logs"
+        },
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+            },
+            "gridPos": {
+                "h": 7,
+                "w": 12,
+                "x": 12,
+                "y": 0
+            },
+            "id": 1,
+            "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "prettifyLogMessage": false,
+                "showCommonLabels": false,
+                "showLabels": false,
+                "showTime": false,
+                "sortOrder": "Descending",
+                "wrapLogMessage": false
+            },
+            "pluginVersion": "12.0.0",
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "${DS_LOKI}"
+                    },
+                    "direction": "backward",
+                    "editorMode": "builder",
+                    "expr": "{container=\"backend-core\"} |= ``",
+                    "queryType": "range",
+                    "refId": "A"
+                }
+            ],
+            "title": "backend-core",
+            "type": "logs"
+        },
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 12,
+                "x": 0,
+                "y": 7
+            },
+            "id": 4,
+            "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "prettifyLogMessage": false,
+                "showCommonLabels": false,
+                "showLabels": false,
+                "showTime": false,
+                "sortOrder": "Descending",
+                "wrapLogMessage": false
+            },
+            "pluginVersion": "12.0.0",
+            "targets": [
+                {
+                    "direction": "backward",
+                    "editorMode": "builder",
+                    "expr": "{container=\"agent-service\"} |= ``",
+                    "queryType": "range",
+                    "refId": "A",
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "${DS_LOKI}"
+                    }
+                }
+            ],
+            "title": "agent-service",
+            "type": "logs"
+        },
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 12,
+                "x": 12,
+                "y": 7
+            },
+            "id": 6,
+            "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "prettifyLogMessage": false,
+                "showCommonLabels": false,
+                "showLabels": false,
+                "showTime": false,
+                "sortOrder": "Descending",
+                "wrapLogMessage": false
+            },
+            "pluginVersion": "12.0.0",
+            "targets": [
+                {
+                    "direction": "backward",
+                    "editorMode": "builder",
+                    "expr": "{container=\"dispatch-worker\"} |= ``",
+                    "queryType": "range",
+                    "refId": "A",
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "${DS_LOKI}"
+                    }
+                }
+            ],
+            "title": "dispatch-worker",
+            "type": "logs"
+        },
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 12,
+                "x": 0,
+                "y": 13
+            },
+            "id": 3,
+            "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "prettifyLogMessage": false,
+                "showCommonLabels": false,
+                "showLabels": false,
+                "showTime": false,
+                "sortOrder": "Descending",
+                "wrapLogMessage": false
+            },
+            "pluginVersion": "12.0.0",
+            "targets": [
+                {
+                    "direction": "backward",
+                    "editorMode": "builder",
+                    "expr": "{container=\"agent-worker\"} |= ``",
+                    "queryType": "range",
+                    "refId": "A",
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "${DS_LOKI}"
+                    }
+                }
+            ],
+            "title": "agent-worker",
+            "type": "logs"
+        },
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 12,
+                "x": 12,
+                "y": 13
+            },
+            "id": 2,
+            "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "prettifyLogMessage": false,
+                "showCommonLabels": false,
+                "showLabels": false,
+                "showTime": false,
+                "sortOrder": "Descending",
+                "wrapLogMessage": false
+            },
+            "pluginVersion": "12.0.0",
+            "targets": [
+                {
+                    "direction": "backward",
+                    "editorMode": "builder",
+                    "expr": "{container=\"attachment-worker\"} |= ``",
+                    "queryType": "range",
+                    "refId": "A",
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "${DS_LOKI}"
+                    }
+                }
+            ],
+            "title": "attachment-worker",
+            "type": "logs"
+        },
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 12,
+                "x": 0,
+                "y": 19
+            },
+            "id": 5,
+            "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "prettifyLogMessage": false,
+                "showCommonLabels": false,
+                "showLabels": false,
+                "showTime": false,
+                "sortOrder": "Descending",
+                "wrapLogMessage": false
+            },
+            "pluginVersion": "12.0.0",
+            "targets": [
+                {
+                    "direction": "backward",
+                    "editorMode": "builder",
+                    "expr": "{container=\"celery-beat\"} |= ``",
+                    "queryType": "range",
+                    "refId": "A",
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "${DS_LOKI}"
+                    }
+                }
+            ],
+            "title": "celery-beat",
+            "type": "logs"
+        },
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 12,
+                "x": 12,
+                "y": 19
+            },
+            "id": 8,
+            "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "prettifyLogMessage": false,
+                "showCommonLabels": false,
+                "showLabels": false,
+                "showTime": false,
+                "sortOrder": "Descending",
+                "wrapLogMessage": false
+            },
+            "pluginVersion": "12.0.0",
+            "targets": [
+                {
+                    "direction": "backward",
+                    "editorMode": "builder",
+                    "expr": "{container=\"flower\"} |= ``",
+                    "queryType": "range",
+                    "refId": "A",
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "${DS_LOKI}"
+                    }
+                }
+            ],
+            "title": "flower",
+            "type": "logs"
+        },
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+            },
+            "gridPos": {
+                "h": 7,
+                "w": 12,
+                "x": 0,
+                "y": 25
+            },
+            "id": 9,
+            "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "prettifyLogMessage": false,
+                "showCommonLabels": false,
+                "showLabels": false,
+                "showTime": false,
+                "sortOrder": "Descending",
+                "wrapLogMessage": false
+            },
+            "pluginVersion": "12.0.0",
+            "targets": [
+                {
+                    "direction": "backward",
+                    "editorMode": "builder",
+                    "expr": "{container=\"backend-worker\"} |= ``",
+                    "queryType": "range",
+                    "refId": "A",
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "${DS_LOKI}"
+                    }
+                }
+            ],
+            "title": "backend-worker",
+            "type": "logs"
+        },
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+            },
+            "gridPos": {
+                "h": 7,
+                "w": 12,
+                "x": 12,
+                "y": 25
+            },
+            "id": 10,
+            "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "prettifyLogMessage": false,
+                "showCommonLabels": false,
+                "showLabels": false,
+                "showTime": false,
+                "sortOrder": "Descending",
+                "wrapLogMessage": false
+            },
+            "pluginVersion": "12.0.0",
+            "targets": [
+                {
+                    "direction": "backward",
+                    "editorMode": "builder",
+                    "expr": "{container=\"web-app\"} |= ``",
+                    "queryType": "range",
+                    "refId": "A",
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "${DS_LOKI}"
+                    }
+                }
+            ],
+            "title": "web-app",
+            "type": "logs"
+        }
+    ],
+    "schemaVersion": 41,
+    "tags": [],
+    "templating": {
+        "list": []
+    },
+    "time": {
+        "from": "now-6h",
+        "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "browser",
+    "title": "Assistcx-services",
+    "uid": "7ffbaf45-c00b-4039-9586-2f5c270f94b9",
+    "version": 22,
+    "weekStart": ""
+}
