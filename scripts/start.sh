@@ -191,8 +191,8 @@ remove_project_images() {
 # Function to remove only AssistCX Docker images
 remove_assistcx_images() {
     echo "Removing AssistCX Docker images..."
-    docker rmi vikasr111/assistcx-backend:${IMAGE_VERSION:-latest} 2>/dev/null || true
-    docker rmi vikasr111/assistcx-web:${IMAGE_VERSION:-latest} 2>/dev/null || true
+    docker rmi sshivam6495/assistcx-backend:${IMAGE_VERSION:-latest} 2>/dev/null || true
+    docker rmi sshivam6495/assistcx-web:${IMAGE_VERSION:-latest} 2>/dev/null || true
 }
 
 # Function to start services quickly (development mode)
@@ -388,8 +388,8 @@ case "$COMMAND" in
         ;;
     --version)
         stop_services
-        if check_image_exists "vikasr111/assistcx-backend" "$VERSION" &&
-           check_image_exists "vikasr111/assistcx-web" "$VERSION"; then
+        if check_image_exists "sshivam6495/assistcx-backend" "$VERSION" &&
+           check_image_exists "sshivam6495/assistcx-web" "$VERSION"; then
             export IMAGE_VERSION=$VERSION
             if [ "$STAGED_MODE" = true ]; then
                 start_services_staged

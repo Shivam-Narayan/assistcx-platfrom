@@ -1,7 +1,7 @@
 services:
   # Core backend service
   backend-core:
-    image: vikasr111/assistcx-backend:${IMAGE_VERSION:-latest}
+    image: sshivam6495/assistcx-backend:${IMAGE_VERSION:-latest}
     container_name: backend-core
     labels:
       logging: promtail
@@ -35,7 +35,7 @@ services:
 
   # Celery worker for attachment and OCR
   attachment-worker:
-    image: vikasr111/assistcx-backend:${IMAGE_VERSION:-latest}
+    image: sshivam6495/assistcx-backend:${IMAGE_VERSION:-latest}
     container_name: attachment-worker
     labels:
       logging: promtail
@@ -56,7 +56,7 @@ services:
     cpus: "${ATTACHMENT_WORKER_CPU:-1}"
     mem_reservation: ${ATTACHMENT_WORKER_MEMORY:-4096}m
   knowledge-worker:
-    image: vikasr111/assistcx-backend:${IMAGE_VERSION:-latest}
+    image: sshivam6495/assistcx-backend:${IMAGE_VERSION:-latest}
     container_name: knowledge-worker
     labels:
       logging: promtail
@@ -81,7 +81,7 @@ services:
 
   # Celery worker for agent execution
   agent-worker:
-    image: vikasr111/assistcx-backend:${IMAGE_VERSION:-latest}
+    image: sshivam6495/assistcx-backend:${IMAGE_VERSION:-latest}
     container_name: agent-worker
     labels:
       logging: promtail
@@ -102,7 +102,7 @@ services:
 
   # Default backend worker
   backend-worker:
-    image: vikasr111/assistcx-backend:${IMAGE_VERSION:-latest}
+    image: sshivam6495/assistcx-backend:${IMAGE_VERSION:-latest}
     container_name: backend-worker
     labels:
       logging: promtail
@@ -129,7 +129,7 @@ services:
 
   # Celery beat scheduler
   celery-beat:
-    image: vikasr111/assistcx-backend:${IMAGE_VERSION:-latest}
+    image: sshivam6495/assistcx-backend:${IMAGE_VERSION:-latest}
     container_name: celery-beat
     labels:
       logging: promtail
@@ -320,7 +320,7 @@ services:
 
   # Celery worker monitoring
   flower:
-    image: vikasr111/assistcx-backend:${IMAGE_VERSION:-latest}
+    image: sshivam6495/assistcx-backend:${IMAGE_VERSION:-latest}
     container_name: flower
     labels:
       logging: promtail
@@ -466,7 +466,7 @@ services:
 
   # Web app
   web-app:
-    image: vikasr111/assistcx-web:latest
+    image: sshivam6495/assistcx-web:latest
     container_name: web-app
     networks:
       - assistcx

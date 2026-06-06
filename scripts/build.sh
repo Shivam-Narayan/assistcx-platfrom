@@ -69,10 +69,10 @@ fi
 echo "Building platform version: $VERSION with $(echo $PLATFORM | cut -d'=' -f2)"
 
 # Define your image name with version tag
-BACKEND_BASE_IMAGE="vikasr111/assistcx-backend:$VERSION"
+BACKEND_BASE_IMAGE="sshivam6495/assistcx-backend:$VERSION"
 
 # Define latest tag name
-BACKEND_BASE_LATEST="vikasr111/assistcx-backend:latest"
+BACKEND_BASE_LATEST="sshivam6495/assistcx-backend:latest"
 
 # Ensure Docker CLI is set to use Buildx
 export DOCKER_CLI_EXPERIMENTAL=enabled
